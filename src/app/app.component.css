@@ -58,8 +58,8 @@ font-display:auto;font-style:normal;font-weight:700;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: 60%;
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
+  margin-top: 90px;
+  margin-bottom: 90px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -67,6 +67,12 @@ font-display:auto;font-style:normal;font-weight:700;
 .link, .orderNumber {
   margin-top: 0px;
   margin-bottom: 0px;
+  text-align: center;
+  font-family: 'omnes-semibold';
+  color: gray;
+  opacity: 60%;
+}
+header, footer {
   text-align: center;
   font-family: 'omnes-semibold';
   color: gray;
