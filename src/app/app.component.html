@@ -1,20 +1,20 @@
-<button class="btn btn-primary" (click)="onGeneratePdf()">Export to PDF</button>
+<!-- <button class="btn btn-primary" (click)="onGeneratePdf()">Export to PDF</button> -->
 
 <div id="notecard" #notecard>
-  <div class="row" *ngFor="let note of testNotes">
+  <div id="newnotecard" #newnotecard class="row" *ngFor="let note of testNotes">
     <div class="column">
-      <p class="orderNumber">{{ note.platformOrderNumber }} </p>
+      <header><p>{{ note.platformOrderNumber }} </p></header>
+
           <img src="https://cdn.shopify.com/s/files/1/0003/1031/3007/files/logo_large_562a126c-15ee-4a09-b2f9-e90423d786cb_180x.png?v=1628565181" class="logo">
-      <p class="link">sendafriend.co</p>
+      <footer><p>sendafriend.co</p></footer>
     </div>
-    <div class="column charLimit">
+    <div class="column">
       <p [ngClass]="{
         'small' : note.noteLength < 151,
         'medium' : note.noteLength < 301 && note.noteLength > 150,
         'large' : note.noteLength < 501 && note.noteLength > 300}"
         >{{ note.note }}</p>
     </div>
-  <div class="pagebreak"></div>
   </div>
 </div>
 
