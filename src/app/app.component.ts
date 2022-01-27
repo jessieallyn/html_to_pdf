@@ -9,7 +9,7 @@ import { helloPdfService } from './hellopdf.service';
 })
 export class AppComponent implements AfterViewInit {
   title = 'html_to_pdf';
-
+  stringify = require('json-stringify-safe');
   html;
 
   public testNotes: GetAFriend[];
@@ -24,8 +24,13 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-      this.html = document.querySelector("html");
+      // this.html = document.querySelector("html");
+      this.html = document.getElementById("notecard");
+      this.html = (this.html.innerHTML);
       console.log(this.html);
+      console.log(typeof(this.html));
+      this.stringify(this.html);
+      console.log(typeof(this.html));
   }
 
 
@@ -33,4 +38,6 @@ export class AppComponent implements AfterViewInit {
   onGeneratePdf() {
     this.helloPdfService.generatePdf(this.html);
   }
+
+
 }
