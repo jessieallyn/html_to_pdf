@@ -13,45 +13,41 @@ font-display:auto;font-style:normal;font-weight:700;
 }
 .row {
   background-color: white;
-  /* height: 4in;
-  width: 6in; */
 }
 .column {
-  /* float: left; */
   width: 50%;
-  /* text-align: center;
-  justify-content: center; */
-  /* width: 2.92in;
-  height: 3.8in; */
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 .small {
   font-size: 20px;
   line-height: 22px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .medium {
   font-size: 18px;
   line-height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .large {
   font-size: 16px;
   line-height: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .charLimit {
-  /* text-align: center; */
-  /* padding-top: 10px;
-  padding-right: 10px; */
-  /* display: flex; */
-  /* justify-content: center; */
-  align-items: center;
+  text-align: center;
   font-family: "omnes-regular";
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 .logo {
   max-width: 90%;
@@ -63,14 +59,6 @@ font-display:auto;font-style:normal;font-weight:700;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.link, .orderNumber {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: center;
-  font-family: 'omnes-semibold';
-  color: gray;
-  opacity: 60%;
 }
 header, footer {
   text-align: center;
