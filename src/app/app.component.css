@@ -1,0 +1,74 @@
+@page {
+  size: 6in 4in;
+}
+@font-face {
+  font-family:"omnes-regular";
+  src:url("https://use.typekit.net/af/9ebd61/000000000000000077359c26/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/9ebd61/000000000000000077359c26/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/9ebd61/000000000000000077359c26/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:600;
+  }
+@font-face {
+font-family:"omnes-semibold";
+src:url("https://use.typekit.net/af/b6e4b0/000000000000000077359c3e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/b6e4b0/000000000000000077359c3e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/b6e4b0/000000000000000077359c3e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;
+}
+.row {
+  background-color: white;
+}
+.column {
+  float: left;
+  width: 2.92in;
+  height: 3.8in;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.small {
+  font-size: 20px;
+  line-height: 22px;
+}
+.medium {
+  font-size: 18px;
+  line-height: 20px;
+}
+.large {
+  font-size: 16px;
+  line-height: 18px;
+}
+.charLimit {
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "omnes-regular";
+}
+.logo {
+  max-width: 90%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 60%;
+  padding-top: 40%;
+  padding-bottom: 45%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link, .orderNumber {
+  padding-top: 15px;
+  text-align: center;
+  font-family: 'omnes-semibold';
+  color: gray;
+  opacity: 60%;
+}
+@media print {
+  .pagebreak {
+    clear: both;
+    page-break-after: always;
+  }
+}
