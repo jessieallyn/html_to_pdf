@@ -27,10 +27,10 @@ export class AppComponent implements AfterViewInit {
       // this.html = document.querySelector("html");
       this.html = document.getElementById("notecard");
       this.html = (this.html.innerHTML);
-      console.log(this.html);
-      console.log(typeof(this.html));
+      // console.log(this.html);
+      // console.log(typeof(this.html));
       this.stringify(this.html);
-      console.log(typeof(this.html));
+      // console.log(typeof(this.html));
   }
 
 
