@@ -1,4 +1,4 @@
-<button class="btn btn-primary">Export to PDF</button>
+<button class="btn btn-primary" (click)="onGeneratePdf()">Export to PDF</button>
 <div id="notecard" #notecard>
   <div class="row" *ngFor="let note of testNotes">
     <div class="column">
