@@ -71,8 +71,4 @@ header, footer {
      page-break-after: always;
      clear: both;
     }
-  /* .pagebreak {
-    clear: both;
-    page-break-after: always;
-  } */
 }
