@@ -11,6 +11,9 @@ export class AppComponent implements AfterViewInit {
   title = 'html_to_pdf';
   stringify = require('json-stringify-safe');
   html;
+  css
+  whole_file;
+
 
   public testNotes: GetAFriend[];
 
@@ -27,16 +30,25 @@ export class AppComponent implements AfterViewInit {
       // this.html = document.querySelector("html");
       this.html = document.getElementById("notecard");
       this.html = (this.html.innerHTML);
+      this.css = document.getElementById("css");
+      console.log(typeof(this.css));
       // console.log(this.html);
       // console.log(typeof(this.html));
-      this.stringify(this.html);
+      this.whole_file = (this.css + this.html);
+      this.whole_file = this.stringify(this.whole_file);
+      // this.html = this.stringify(this.html);
+      // this.css = JSON.stringify(this.css);
+
+      console.log(typeof(this.whole_file));
+      console.log(this.whole_file);
       // console.log(typeof(this.html));
+      // this.onGeneratePdf(this.whole_file);
   }
 
 
 
-  onGeneratePdf() {
-    this.helloPdfService.generatePdf(this.html);
+  onGeneratePdf(html) {
+    this.helloPdfService.generatePdf(html);
   }
 
 

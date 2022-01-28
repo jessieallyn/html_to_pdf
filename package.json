@@ -23,6 +23,8 @@
     "file-saver": "^2.0.5",
     "json-stringify-safe": "^5.0.1",
     "rxjs": "~7.4.0",
+    "string": "^3.3.3",
+    "string-css": "0.0.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
