@@ -1,19 +1,48 @@
 <!-- <button class="btn btn-primary" (click)="onGeneratePdf()">Export to PDF</button> -->
 
 <div id="notecard" #notecard>
-  <div id="newnotecard" #newnotecard class="row" *ngFor="let note of testNotes">
-    <div class="column">
-      <header><p>{{ note.platformOrderNumber }}</p></header>
-          <img src="https://cdn.shopify.com/s/files/1/0003/1031/3007/files/logo_large_562a126c-15ee-4a09-b2f9-e90423d786cb_180x.png?v=1628565181" class="logo">
-      <footer><p>sendafriend.co</p></footer>
+  <div id="newnotecard" #newnotecard
+  *ngFor="let note of testNotes"
+  style="background-color: white;
+  page-break-after: always;
+  clear:both;
+  columns: auto 2;">
+    <div>
+      <header style=
+        "text-align: center;
+        font-family: 'omnes-semi-bold';
+        color: gray;
+        opacity: 50%;">
+      <p>{{ note.platformOrderNumber }}</p></header>
+          <img src="https://cdn.shopify.com/s/files/1/0003/1031/3007/files/logo_large_562a126c-15ee-4a09-b2f9-e90423d786cb_180x.png?v=1628565181"
+          style="max-width: 90%;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          opacity: 60%;
+          margin-top: 90px;
+          margin-bottom: 90px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;">
+      <footer style=
+        "text-align: center;
+        font-family: 'omnes-semi-bold';
+        color: gray;
+        opacity: 50%;">
+      <p>sendafriend.co</p></footer>
     </div>
-    <div class="column charLimit">
+    <div style="content:''; display: table; clear: both;"></div>
+    <div style="
+      text-align: center;
+      font-family:'omnes-regular';
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;">
       <content>
-        <p [ngClass]="{
-          'small' : note.noteLength < 151,
-          'medium' : note.noteLength < 301 && note.noteLength > 150,
-          'large' : note.noteLength < 501 && note.noteLength > 300}"
-          >{{ note.note }}</p>
+        <p *ngIf="note.noteLength < 151" style="font-size: 20px; line-height: 22px; margin-left: 15px; margin-right: 15px;">{{ note.note }}</p>
+        <p *ngIf="note.noteLength < 301 && note.noteLength > 150" style="font-size: 18px; line-height: 20px; margin-left: 10px; margin-right: 10px;">{{ note.note }}</p>
+        <p *ngIf="note.noteLength < 501 && note.noteLength > 300" style="font-size: 16px; line-height: 18px; margin-left: 5px; margin-right: 5px;">{{ note.note }}</p>
       </content>
     </div>
   </div>
